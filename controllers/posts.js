@@ -1,7 +1,7 @@
 const Post = require('../models/post');
 
 exports.createPost = (req, res, next) => {
-    const url = '://' + req.get('host');
+    const url = 'https://' + req.get('host');
     const post = new Post({
       title: req.body.title,
       content: req.body.content,
