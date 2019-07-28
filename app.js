@@ -33,5 +33,4 @@ app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, 'angular', 'index.html'));
 });
 
-console.log("Hi from express app!");
  module.exports = app;

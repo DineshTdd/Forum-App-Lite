@@ -26,7 +26,6 @@ exports.createUser = (req, res, next) => {
 
 exports.userLogin = (req, res, next) => {
     let fetchedUser;
-    console.log("Hi from User controller1!!");
     User.findOne({ email: req.body.email})
         .then(user => {
             if (!user) {
@@ -35,7 +34,6 @@ exports.userLogin = (req, res, next) => {
                 });
             }
             fetchedUser = user;
-        console.log("Hi from User controller2!!");
     return bcrypt.compare(req.body.password, user.password);
         })
         .then(result => {
